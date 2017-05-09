@@ -8,6 +8,10 @@ class unitest(unittest.TestCase):
         inputList = [4,3,2,7,8,2,3,1]
         ans = [2,3]
         self.assertEqual(Solution().findDuplicates(inputList),ans)
+    def testSpecialCase(self):
+        inputList = [4,3,2,7,8,2,3,1,2]
+        ans = [2,3,2]
+        self.assertEqual(Solution().findDuplicates(inputList),ans)
 class Solution(object):
     def findDuplicates(self, nums):
         ans = []
