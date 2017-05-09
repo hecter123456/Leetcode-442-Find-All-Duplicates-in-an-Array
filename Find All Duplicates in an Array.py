@@ -17,12 +17,11 @@ class Solution(object):
         ans = []
         if nums == []:
             return ans
-        searchset = set() 
         for node in nums:
-            if node in searchset:
-                ans.append(node)
+            if nums[abs(node)-1] < 0:
+                ans.append(abs(node))
             else:
-                searchset.add(node)
+                nums[abs(node)-1] *= -1
         return ans
 
 if __name__ == '__main__':
